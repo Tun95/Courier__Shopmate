@@ -1,0 +1,190 @@
+.box {
+  /*====== Services ======*/
+  .services {
+    margin-top: 50px;
+
+    .blog_content {
+      display: flex;
+
+      height: 385px;
+      background-color: var(--color-bg-btn);
+      position: relative;
+      z-index: 1;
+      .title_link {
+        color: var(--color-dark);
+      }
+      .image {
+        flex: 1;
+      }
+      img {
+        height: 385px;
+      }
+      .content {
+        flex: 1;
+        margin-left: 0;
+        h1,
+        p,
+        .blog_btn {
+          margin-left: 30px;
+        }
+      }
+    }
+    .blog_content:nth-child(odd) {
+      flex-direction: row-reverse;
+    }
+  }
+  /*====== Performance ======*/
+  .s_performance {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)),
+      url(../../asset/UnderService/4.jpg);
+    height: 900px;
+    margin-top: -260px;
+    margin-bottom: 0;
+    .sections {
+      position: relative;
+      top: 300px;
+      .section_2::before {
+        height: 400px;
+        width: 10px;
+      }
+    }
+  }
+  /*====== Image Banner ======*/
+  .img_banner_box {
+    .img_banner_cont {
+      padding: 20px;
+      position: relative;
+      bottom: 90px;
+      background-color: var(--color-white);
+      img {
+        width: 100%;
+      }
+    }
+  }
+  /*====== Contact Info ======*/
+  .contact_info {
+    background-color: var(--color-white);
+    height: 280px;
+    margin-top: -50px;
+    display: flex;
+    align-items: center;
+    .contact_info_cont {
+      position: relative;
+      bottom: 30px;
+      .icon {
+        position: relative;
+        bottom: 30px;
+      }
+    }
+  }
+}
+/*======= MEDIA QUERIES (MEDIUM DEVICES) =======*/
+@media screen and (max-width: 1024px) {
+  .box {
+    .services {
+      .blog_content {
+        height: 280px;
+        img {
+          height: 280px;
+        }
+        .content {
+          position: relative;
+          bottom: 25px;
+          h1 {
+            margin-bottom: -10px;
+          }
+          p {
+            margin-top: -15px;
+          }
+          .blog_btn {
+            margin-top: 0px;
+            position: relative;
+            bottom: 80px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*======= MEDIA QUERIES (MEDIUM DEVICES) =======*/
+@media screen and (max-width: 800px) {
+  .box {
+    /*====== Performance ======*/
+    .s_performance {
+      height: 1200px;
+    }
+  }
+}
+
+/*======= MEDIA QUERIES (SMALL DEVICES) =======*/
+@media screen and (max-width: 600px) {
+  .box {
+    /*====== Services ======*/
+    .services {
+      .blog_box {
+        .blog_style {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          .blog_terror {
+            width: 90%;
+          }
+          .blog_content {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 270px;
+
+            .image {
+              flex: 0;
+            }
+            .content {
+              margin-top: -3px;
+              background-color: var(--color-bg-btn);
+              padding-bottom: 10px;
+              flex: 0;
+              padding: 10px;
+              h1 {
+                margin-top: 5px;
+                margin-bottom: 20px;
+              }
+
+              h1,
+              p,
+              .blog_btn {
+                margin-left: 0;
+                bottom: 0;
+              }
+              .blog_btn {
+                margin-top: 10px;
+              }
+            }
+          }
+          .blog_content:nth-child(odd) {
+            flex-direction: column;
+          }
+        }
+      }
+    }
+    /*====== Performance ======*/
+    .s_performance {
+      height: 1100px;
+      .section_2 {
+        margin-top: -80px;
+      }
+    }
+    /*====== Contact Info ======*/
+    .contact_info {
+      height: 100%;
+      .contact_info_cont {
+        padding: 10px 0px;
+        padding-bottom: 20px;
+        bottom: 0px;
+
+        .section_1 {
+          margin-top: 30px;
+        }
+      }
+    }
+  }
+}

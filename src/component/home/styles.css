@@ -1,0 +1,376 @@
+/*====== Banner ======*/
+.home {
+  overflow: hidden;
+}
+.home .banner {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../../asset/Hero/12.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 500px;
+  color: var(--color-white);
+}
+.home .banner .banner_box {
+  position: relative;
+  top: 130px;
+}
+.home .banner .banner_box h1 {
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.home .banner .banner_box p {
+  margin-bottom: 10px;
+  line-height: 20px;
+  width: 50%;
+}
+.home .banner .banner_box .banner_btn_right {
+  margin-left: 30px;
+}
+
+/*====== Contact Info ======*/
+.home .contact_info {
+  background-color: var(--color-bg-btn);
+
+  margin-bottom: 40px;
+}
+.home .contact_info_box {
+  padding: 50px 0px;
+}
+
+.home .contact_info_box .section_1 {
+  display: flex;
+}
+.contact_info p {
+  color: var(--color-ash);
+  font-size: 15px;
+  width: 200px;
+  line-height: 25px;
+}
+.contact_info_box .fa-solid {
+  font-size: 40px;
+  color: var(--color-red);
+  margin-right: 10px;
+  margin-top: 2px;
+}
+.contact_info_box h2 {
+  text-transform: uppercase;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/*====== Services ======*/
+.h_service .top_section {
+  display: flex;
+  margin-bottom: 50px;
+}
+
+.h_service .top_section::before {
+  content: "";
+  width: 5px;
+  height: 150px;
+  background-color: var(--color-red);
+  color: var(--color-red);
+}
+.h_service .section {
+  margin-top: 40px;
+  margin-left: 20px;
+}
+.h_service .section h2 {
+  margin-bottom: 30px;
+}
+.h_service .section p {
+  width: 60%;
+  line-height: 25px;
+}
+.h_service .lower_section {
+  padding: 0px 20px;
+}
+.h_service .lower_section img {
+  width: 350px;
+  height: 240px;
+}
+.h_service .l_section {
+  margin-right: 15px;
+  width: 90%;
+}
+.h_service .l_section h3 {
+  margin: 20px 0px;
+  margin-top: 10px;
+  color: var(--color-light-dark);
+}
+.h_service .l_section p {
+  color: var(--color-ash);
+  font-size: 15px;
+}
+
+/*====== Testimonial ======*/
+.testimonial {
+  margin-top: 70px;
+  margin-bottom: 120px;
+}
+.testimonial p {
+  color: var(--color-ash);
+}
+.testimonial .testimonial_content {
+  display: flex;
+  margin-bottom: 50px;
+}
+.testimonial .testimonial_content::before {
+  content: "";
+  width: 15px;
+  height: 350px;
+  background-color: var(--color-red);
+  color: var(--color-red);
+}
+.testimonial .section_1 {
+  margin-left: 20px;
+  width: 85%;
+}
+.testimonial .section_1 .sect_testimonies {
+  margin-top: 40px;
+}
+.testimonial .section_1 h4 {
+  text-transform: uppercase;
+  color: var(--color-red);
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+.testimonial .section_1 h1 {
+  margin-bottom: 30px;
+}
+.testimonial .section_1 p {
+  color: var(--color-ash);
+  line-height: 25px;
+}
+.testimonial .section_2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  height: 350px;
+}
+.testimonial .section_2 .testimonies {
+  background-color: var(--color-white);
+  border-radius: 20px;
+  padding: 20px;
+}
+.testimonial .testimonies .quote {
+  width: 60px;
+  margin-bottom: 30px;
+}
+.testimonial .testimonies p {
+  line-height: 25px;
+  margin-bottom: 5px;
+}
+.testimonial .section_2 .name_img {
+  position: relative;
+  top: 80px;
+}
+.testimonial .section_2 .name_img img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+/*====== Performances ======*/
+.performance {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(../../asset/UnderService/4.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 300px;
+  color: var(--color-white);
+  margin-bottom: 80px;
+}
+.performance .sections {
+  position: relative;
+  top: 30px;
+}
+
+/*-----Progress Bars -----*/
+.performance .progress_box {
+  width: 95%;
+  margin: 25px 0px;
+}
+.performance .title {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-white);
+  text-transform: uppercase;
+}
+.performance .progress_bar {
+  height: 8px;
+  width: 100%;
+  margin-top: 6px;
+  background: rgba(230, 230, 230, 0.212);
+}
+.performance .progress_per {
+  position: relative;
+  display: block;
+  height: 100%;
+  width: 95%;
+
+  background: var(--color-red);
+  animation: progress 1.4s ease-in-out forwards;
+  opacity: 0;
+}
+.performance .progress_per.progress1 {
+  width: 90%;
+  animation-delay: 1.4s;
+}
+.performance .progress_per.progress2 {
+  width: 80%;
+  animation-delay: 1.8s;
+}
+.performance .progress_per.progress3 {
+  width: 75%;
+  animation-delay: 1.6s;
+}
+
+.performance .progress_per.progress4 {
+  width: 90%;
+  animation-delay: 1.2s;
+}
+@keyframes progress {
+  0% {
+    width: 0;
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.performance .tooltip {
+  position: absolute;
+  right: -14px;
+  top: -28px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-white);
+  padding: 2px 6px;
+  border-radius: 3px;
+  background: var(--color-red);
+  z-index: 1;
+}
+.performance .tooltip::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -2px;
+  height: 10px;
+  width: 10px;
+  z-index: -1;
+  background-color: var(--color-red);
+  transform: translateX(-50%) rotate(45deg);
+}
+/*-----Progress Bars -----*/
+
+.performance .section_2 {
+  display: flex;
+  align-items: center;
+}
+.performance .section_2::before {
+  content: "";
+  width: 8px;
+  height: 200px;
+  background-color: var(--color-red);
+  color: var(--color-red);
+}
+.performance .section_2 .content {
+  margin-left: 20px;
+}
+.performance .section_2 .content h1 {
+  margin-bottom: 20px;
+}
+.performance .section_2 .content p {
+  font-size: 15px;
+
+  line-height: 25px;
+}
+
+/*====== Blog Post ======*/
+.blog_post {
+  margin-bottom: 100px;
+}
+.blog_post .l_section h3 {
+  color: var(--color-ash);
+}
+.blog_post .services_box_cont .blog_btn a {
+  position: relative;
+  left: 20px;
+  top: 20px;
+}
+.blog_post .fa-right-long {
+  font-size: 17px;
+}
+
+/*======= MEDIA QUERIES (MEDIUM DEVICES) =======*/
+@media screen and (max-width: 1024px) {
+  .testimonial .section_2 {
+    grid-template-columns: 1fr;
+    height: 100%;
+  }
+  .testimonial .section_2 .testi_2 {
+    margin-top: 50px;
+  }
+  .h_service .top_section::before {
+    height: 170px;
+  }
+  .h_service .lower_section {
+    padding: 0px;
+  }
+  .h_service .l_section {
+    width: 90%;
+  }
+
+  .blog_post .services_box_cont .blog_btn a {
+    left: 0;
+  }
+}
+
+/*======= MEDIA QUERIES (MEDIUM DEVICES) =======*/
+@media screen and (max-width: 800px) {
+  .h_service .lower_section img {
+    width: 320px;
+    height: 230px;
+  }
+  .performance {
+    height: 100%;
+  }
+  .performance .sections {
+    position: relative;
+    top: 0px;
+    padding: 10px 0px;
+  }
+  .performance .progress_box {
+    width: 100%;
+  }
+}
+
+/*======= MEDIA QUERIES (SMALL DEVICES) =======*/
+@media screen and (max-width: 600px) {
+  .h_service .top_section::before {
+    height: 220px;
+    width: 10px;
+  }
+  .testimonial .sections {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .testimonial .section_2 {
+    margin-top: 140px;
+    gap: 0px;
+    margin-left: -5px;
+  }
+  .testimonial .section_2 .testimonies {
+    width: 80%;
+  }
+
+  .h_service .lower_section {
+    padding: 0px 30px;
+  }
+  .blog_post .services_box_cont .blog_btn a {
+    left: 30px;
+  }
+}

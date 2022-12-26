@@ -1,38 +1,213 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+:root {
+  --color-bg: #f7f7f7;
+  --color-primary: #df9527;
+  --color-primary-variant: rgba(77, 181, 255, 0.4);
+  --color-white: #fff;
+  --color-light: #b4b4b4;
+  --color-ash: #6c6c6c;
+  --color-light-dark: #3a3a3a;
+  --color-dark: #2e2e2e;
+  --color-red: #e97910;
+  --color-bg-btn: #ebebeb;
+  --color-bg-input: rgb(238, 238, 238);
+
+  --transition: all 400ms ease;
+
+  --container-width-lg: 75%;
+  --container-width-md: 85%;
+  --container-width-sm: 98%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/*======= MEDIA TRANSITION =======*/
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(100%);
+  transition: all 1s;
+}
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+/*======= MEDIA TRANSITION =======*/
+
+html {
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+body {
+  font-family: sans-serif;
+  background-color: var(--color-bg);
+}
+input,
+textarea {
+  background-color: var(--color-bg-input);
+  font-size: 16px;
+}
+textarea {
+  resize: none;
+  font-family: sans-serif;
+}
+.background {
+  background: var(--color-bg);
+}
+.container {
+  width: var(--container-width-lg);
+  margin: 0% auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.btn {
+  width: max-content;
+  display: inline-block;
+  color: var(--color-white);
+  padding: 8px 30px;
+  cursor: pointer;
+  border: 2px solid var(--color-red);
+  transition: var(--transition);
+  font-weight: 600;
+}
+.btn:hover {
+  background: var(--color-red);
+  color: var(--color-white);
+  border-color: transparent;
+}
+.btn-primary {
+  background: var(--color-red);
+  color: var(--color-bg);
+}
+.btn-primary:hover {
+  background: linear-gradient(rgba(252, 172, 53, 0.6), rgba(252, 172, 53, 0.6));
+  color: var(--color-white);
+  border-color: var(--color-red);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.flex {
   display: flex;
-  flex-direction: column;
+}
+
+.d_flex {
+  display: flex;
   align-items: center;
+}
+.s_flex {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+}
+.f_flex {
+  display: flex;
+  justify-content: center;
+}
+.c-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.e_flex {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  justify-content: space-between;
+}
+.b_flex {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-between;
+}
+.p_flex {
+  display: grid;
+  grid-template-columns: 70% 30%;
+  justify-content: space-between;
+  align-items: center;
+}
+.p_flex1 {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  align-items: center;
+  gap: 20px;
+}
+.sb_flex {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.n_flex {
+  display: inline-flex;
+  align-items: center;
+}
+.l_flex {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.fa-star {
+  color: #ffc000;
+}
+.d_grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
 }
 
-.App-link {
-  color: #61dafb;
-}
+/*--- About Page ----*/
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/*======= MEDIA QUERIES (MEDIUM DEVICES) =======*/
+@media screen and (max-width: 1300px) {
+  .sb_flex {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+/*======= MEDIA QUERIES (MEDIUM DEVICES) =======*/
+@media screen and (max-width: 1024px) {
+  .container {
+    width: var(--container-width-md);
+  }
+  .sb_flex {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+  .d_grid {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+/*======= MEDIA QUERIES (MEDIUM DEVICES) =======*/
+@media screen and (max-width: 800px) {
+  .p_flex,
+  .p_flex1 {
+    grid-template-columns: 100%;
+    flex-direction: column-reverse;
+  }
+}
+
+/*======= MEDIA QUERIES (SMALL DEVICES) =======*/
+@media screen and (max-width: 600px) {
+  .container {
+    width: var(--container-width-sm);
+    display: grid;
+  }
+  .sb_flex {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .d_grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 }
