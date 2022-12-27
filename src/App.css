@@ -163,7 +163,7 @@ textarea {
 
 /*--- About Page ----*/
 
-/*======= MEDIA QUERIES (MEDIUM DEVICES) =======*/
+/*======= MEDIA QUERIES (LARGE DEVICES) =======*/
 @media screen and (max-width: 1300px) {
   .sb_flex {
     grid-template-columns: repeat(2, 1fr);
