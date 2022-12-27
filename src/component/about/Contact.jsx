@@ -24,7 +24,7 @@ function Contact() {
               quis sequi. repudiandae
             </p>
             <div className="blog_btn">
-              <Link to="" className="btn btn-primary">
+              <Link to="/contact" className="btn btn-primary">
                 Contact Us <i className="fa-sharp fa-solid fa-right-long"></i>
               </Link>
             </div>
