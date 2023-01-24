@@ -16,9 +16,9 @@ function Nav() {
       <div className="nav_bar container">
         <div className="nav_bar_cont  c-flex">
           <div className="logo">
-            {/* <Link to="/">
+            <Link to="/">
               <img src={Logo} alt="" />
-            </Link> */}
+            </Link>
           </div>
           <div className="nav_list">
             <ul className="nav_ul n_flex">
