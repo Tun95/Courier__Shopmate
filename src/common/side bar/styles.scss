@@ -1,4 +1,4 @@
-/*====Side Bar ====*/
+/*====Blog Side Bar ====*/
 .side_bar {
   .sections {
     .section_box {
@@ -71,6 +71,25 @@
     }
   }
 }
+
+/*====Side Bar ====*/
+.menu_btn_icon {
+  .menu_icon {
+    color: var(--color-red);
+    font-size: 40px;
+  }
+}
+.listItemText {
+  color: var(--color-dark);
+}
+
+/*======= MEDIA QUERIES (MEDIUM DEVICES) =======*/
+@media screen and (max-width: 1024px) {
+  .side_modal {
+    display: grid;
+  }
+}
+
 /*======= MEDIA QUERIES (MEDIUM DEVICES) =======*/
 @media screen and (max-width: 800px) {
   .side_bar {

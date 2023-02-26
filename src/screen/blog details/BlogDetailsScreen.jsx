@@ -1,5 +1,5 @@
 import React from "react";
-import SideBar from "../../common/side bar/SideBar";
+import BlogSideBar from "../../common/side bar/BlogSideBar";
 import Details from "../../component/blog details/Details";
 
 function BlogDetailsScreen() {
@@ -8,7 +8,7 @@ function BlogDetailsScreen() {
       <div className="container">
         <div className="blog_grid">
           <Details />
-          <SideBar />
+          <BlogSideBar />
         </div>
       </div>
     </>

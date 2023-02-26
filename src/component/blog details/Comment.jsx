@@ -23,7 +23,7 @@ function Comment() {
             </div>
           </div>
           <div className="comment_btn">
-            <Link className="btn btn-primary">Post Comment</Link>
+            <Link to="" className="btn btn-primary">Post Comment</Link>
           </div>
         </form>
       </div>

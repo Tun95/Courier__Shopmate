@@ -1,120 +1,117 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./styles.scss";
+import Box from "@mui/material/Box";
+import Drawer from "@mui/material/Drawer";
+import Button from "@mui/material/Button";
+import List from "@mui/material/List";
+import Divider from "@mui/material/Divider";
+import ListItem from "@mui/material/ListItem";
+import ListItemButton from "@mui/material/ListItemButton";
+import ListItemIcon from "@mui/material/ListItemIcon";
+import ListItemText from "@mui/material/ListItemText";
+import InboxIcon from "@mui/icons-material/MoveToInbox";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import MenuIcon from "@mui/icons-material/Menu";
+import PlaceIcon from "@mui/icons-material/Place";
+import HomeIcon from "@mui/icons-material/Home";
+import ChromeReaderModeIcon from "@mui/icons-material/ChromeReaderMode";
+import CallIcon from "@mui/icons-material/Call";
+import HelpCenterIcon from "@mui/icons-material/HelpCenter";
+import BuildIcon from "@mui/icons-material/Build";
 
 function SideBar() {
-  const data = [
+  const [state, setState] = React.useState({
+    right: false,
+  });
+
+  const toggleDrawer = (anchor, open) => (event) => {
+    if (
+      event.type === "keydown" &&
+      (event.key === "Tab" || event.key === "Shift")
+    ) {
+      return;
+    }
+
+    setState({ ...state, [anchor]: open });
+  };
+
+  const webItemList = [
     {
-      id: 1,
-      title: "Logistics Firm Agrees $9.9m Property Deal In A Big Profile Case",
+      text: "Home",
+      icon: <HomeIcon style={{ fill: "black" }} />,
+      to: "/", // <-- add link targets
     },
     {
-      id: 2,
-      title:
-        "Tools to Help Reduce Freight's Climate Impact Coming To New Markets",
+      text: "About",
+      icon: <HelpCenterIcon style={{ fill: "black" }} />,
+      to: "/about",
     },
     {
-      id: 3,
-      title: "Logistics Firm Agrees $9.9m Property Deal In A Big Profile Case",
+      text: "Services",
+      icon: <BuildIcon style={{ fill: "black" }} />,
+      to: "/services",
     },
     {
-      id: 4,
-      title:
-        "Tools to Help Reduce Freight's Climate Impact Coming To New Markets",
+      text: "Track Goods",
+      icon: <PlaceIcon style={{ fill: "black" }} />,
+      to: "/track-goods",
     },
     {
-      id: 5,
-      title: "Logistics Firm Agrees $9.9m Property Deal In A Big Profile Case",
+      text: "Contact",
+      icon: <CallIcon style={{ fill: "black" }} />,
+      to: "/contact",
+    },
+    {
+      text: "Blog",
+      icon: <ChromeReaderModeIcon style={{ fill: "black" }} />,
+      to: "/blog-post",
     },
   ];
+
+  const list = (anchor) => (
+    <Box
+      sx={{ width: anchor === "top" || anchor === "bottom" ? "auto" : 250 }}
+      role="presentation"
+      onClick={toggleDrawer(anchor, false)}
+      onKeyDown={toggleDrawer(anchor, false)}
+    >
+      <List>
+        {webItemList.map((item, index) => {
+          const { text, icon } = item;
+          return (
+            <ListItem disablePadding component={Link} to={item.to} key={text}>
+              <ListItemButton>
+                {icon && <ListItemIcon>{icon}</ListItemIcon>}
+                <ListItemText primary={text} className="listItemText" />
+              </ListItemButton>
+            </ListItem>
+          );
+        })}
+      </List>
+      <Divider />
+    </Box>
+  );
+
   return (
-    <div className="side_bar">
-      <div className="side_bar_box">
-        <div className="side_bar_content">
-          <div className="sections">
-            <div className="section_box">
-              <div className="search">
-                <label htmlFor="search">Search</label>
-                <form action="" className="search_box_btn d_flex">
-                  <input type="search" />
-                  <button>Search</button>
-                </form>
-              </div>
-            </div>
-            <div className="section_box">
-              <h2>Categories</h2>
-            </div>
-            <div className="section_box">
-              <ul className="category_list">
-                <li className="d_flex">
-                  <Link to="">Logistic</Link>
-                  <span>(2)</span>
-                </li>
-                <li className="d_flex">
-                  <Link to="">Freight</Link>
-                  <span>(1)</span>
-                </li>
-              </ul>
-            </div>
-            <div className="section_box">
-              <h2>Recent Post</h2>
-            </div>
-            <div className="section_box">
-              {data.map(({ id, title }, index) => (
-                <ul className="recent_post" key={index}>
-                  <li>
-                    <Link to="">{title}</Link>
-                  </li>
-                </ul>
-              ))}
-            </div>
-            <div className="section_box">
-              <h2>Archives</h2>
-              <ul className="archive_list">
-                <li>
-                  <Link to="">December 2022</Link>
-                </li>
-              </ul>
-            </div>
-            <div className="section_box">
-              <h2>Categories</h2>
-              <div className="lower_category">
-                <ul className="category_list">
-                  <li className="d_flex">
-                    <Link to="">Logistic</Link>
-                  </li>
-                  <li className="d_flex">
-                    <Link to="">Freight</Link>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div className="section_box">
-              <h4>Event</h4>
-              <div className="event_list">
-                <ul className="event_list_ul">
-                  <li>
-                    <p>
-                      {" "}
-                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                      Accusantium hic laboriosam suscipit.
-                    </p>{" "}
-                  </li>
-                  <li>
-                    <p>
-                      {" "}
-                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                      Accusantium hic laboriosam suscipit. Lorem ipsum dolor
-                      sit, amet consectetur adipisicing elit. Accusantium hic
-                      laboriosam suscipit.
-                    </p>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div>
+      {["right"].map((anchor) => (
+        <React.Fragment key={anchor}>
+          <Button
+            className="menu_btn_icon"
+            onClick={toggleDrawer(anchor, true)}
+          >
+            <MenuIcon className="menu_icon" />
+          </Button>
+          <Drawer
+            anchor={anchor}
+            open={state[anchor]}
+            onClose={toggleDrawer(anchor, false)}
+          >
+            {list(anchor)}
+          </Drawer>
+        </React.Fragment>
+      ))}
     </div>
   );
 }

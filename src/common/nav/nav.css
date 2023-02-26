@@ -11,12 +11,19 @@
 .nav .nav_links {
   color: var(--color-ash);
 }
-.nav .nav_ul .active {
+.nav .nav_links:hover {
   color: var(--color-primary);
+}
+.nav .menuIcon {
+  margin-top: -20px;
+  display: none;
 }
 /*======= MEDIA QUERIES (MEDIUM DEVICES) =======*/
 @media screen and (max-width: 1024px) {
   .nav .nav_ul a {
     display: none;
+  }
+  .nav .menuIcon {
+    display: block;
   }
 }

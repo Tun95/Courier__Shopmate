@@ -10,6 +10,7 @@ import TrackScreen from "./screen/track goods/TrackScreen";
 import ContactScreen from "./screen/contact/ContactScreen";
 import BlogScreen from "./screen/blog/BlogScreen";
 import BlogDetailsScreen from "./screen/blog details/BlogDetailsScreen";
+import SideBar from "./common/side bar/SideBar";
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
@@ -29,11 +30,12 @@ function App() {
     <div className="App">
       <Router>
         <Nav />
+        
         <Routes>
           <Route path="/" element={<HomeScreen />}></Route>
           <Route path="/about" element={<AboutScreen />}></Route>
           <Route path="/services" element={<ServiceScreen />}></Route>
-          <Route path="/track" element={<TrackScreen />}></Route>
+          <Route path="/track-goods" element={<TrackScreen />}></Route>
           <Route path="/contact" element={<ContactScreen />}></Route>
           <Route path="/blog-post" element={<BlogScreen />}></Route>
           <Route
