@@ -88,7 +88,7 @@ function Footer() {
           <p>
             Copyright&copy; 2022 | Fast Logistic Company | Developed by{" "}
             <a
-              href="https://myporfolio.com"
+              href="https://my-portfolio-app-7oam.onrender.com/"
               target="_blank"
               rel="noopener noreferrer"
             >
