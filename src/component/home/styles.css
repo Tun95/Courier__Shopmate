@@ -354,14 +354,15 @@
     width: 100%;
   }
 }
-/*======= MEDIA QUERIES (SMALL DEVICES) =======*/
-@media screen and (max-width: 778px) {
-}
+
 /*======= MEDIA QUERIES (SMALL DEVICES) =======*/
 @media screen and (max-width: 600px) {
   .h_service .top_section::before {
     height: 220px;
     width: 10px;
+  }
+  .h_service .section p {
+    width: 90%;
   }
   .testimonial .sections {
     display: grid;
@@ -370,10 +371,9 @@
   .testimonial .section_2 {
     margin-top: 140px;
     gap: 0px;
-    margin-left: -5px;
   }
   .testimonial .section_2 .testimonies {
-    width: 80%;
+    width: 98%;
   }
 
   .h_service .lower_section {

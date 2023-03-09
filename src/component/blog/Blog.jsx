@@ -40,7 +40,7 @@ function Blog() {
     <div className="blog">
       {data.map(
         ({ id, title, postedBy, image, short_desc, category }, index) => (
-          <div className="blog_box">
+          <div className="blog_box" key={index}>
             <div className="blog_content">
               <div className="post">
                 <div className="header">

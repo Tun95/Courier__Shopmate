@@ -127,7 +127,9 @@
         }
         grid-template-columns: 1fr;
         .testimonies {
-          width: 90%;
+          width: 100%;
+        position: relative;
+        right: 3px;
         }
       }
     }
