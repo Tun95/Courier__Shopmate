@@ -51,6 +51,18 @@
       }
     }
   }
- 
 }
 
+/*======= MEDIA QUERIES (SMALL DEVICES) =======*/
+@media screen and (max-width: 600px) {
+  .blog_grid {
+    /*====Main Blog ====*/
+    .blog {
+      .blog_box {
+        .blog_content {
+          padding: 40px 10px;
+        }
+      }
+    }
+  }
+}
