@@ -19,6 +19,7 @@ import ChromeReaderModeIcon from "@mui/icons-material/ChromeReaderMode";
 import CallIcon from "@mui/icons-material/Call";
 import HelpCenterIcon from "@mui/icons-material/HelpCenter";
 import BuildIcon from "@mui/icons-material/Build";
+import Logo from "../../asset/Logo/Website Logo/Logo.png";
 
 function SideBar() {
   const [state, setState] = React.useState({
@@ -38,9 +39,14 @@ function SideBar() {
 
   const webItemList = [
     {
+      text: "",
+      icon: <img src={Logo} alt="" />,
+      to: "/",
+    },
+    {
       text: "Home",
       icon: <HomeIcon style={{ fill: "black" }} />,
-      to: "/", // <-- add link targets
+      to: "/",
     },
     {
       text: "About",
