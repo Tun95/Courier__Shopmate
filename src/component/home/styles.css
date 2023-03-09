@@ -3,16 +3,23 @@
   overflow: hidden;
 }
 .home .banner {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url(../../asset/Hero/12.jpg);
   background-position: center;
-  background-size: cover;
-  height: 500px;
+  background-size: cover; */
+  height: 100%;
+  overflow: hidden;
   color: var(--color-white);
+}
+.home .banner_slider {
+  position: relative;
+  top: 0;
+  margin-top: -250px;
 }
 .home .banner .banner_box {
   position: relative;
   top: 130px;
+  z-index: 3;
 }
 .home .banner .banner_box h1 {
   text-transform: uppercase;
@@ -347,7 +354,9 @@
     width: 100%;
   }
 }
-
+/*======= MEDIA QUERIES (SMALL DEVICES) =======*/
+@media screen and (max-width: 778px) {
+}
 /*======= MEDIA QUERIES (SMALL DEVICES) =======*/
 @media screen and (max-width: 600px) {
   .h_service .top_section::before {
