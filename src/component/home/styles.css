@@ -7,10 +7,18 @@
   overflow: hidden;
   color: var(--color-white);
 }
+.home .banner .light_dark {
+  background: rgba(0, 0, 0, 0.5);
+  height: 99.4%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+
 .home .banner_slider {
   position: relative;
   top: 0;
-  margin-top: -250px;
+  margin-top: -230px;
 }
 .home .banner .banner_box {
   position: relative;
@@ -381,8 +389,8 @@
   }
 }
 /*======= MEDIA QUERIES (SMALL DEVICES) =======*/
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 402px) {
   .home .banner {
-    margin-top: -20px;
+    margin-top: -40px;
   }
 }

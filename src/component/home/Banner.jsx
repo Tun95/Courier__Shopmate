@@ -33,6 +33,7 @@ function Banner() {
         </div>
         <div className="banner_slider">
           <Slider />
+          <div className="light_dark"></div>
         </div>
       </div>
     </>

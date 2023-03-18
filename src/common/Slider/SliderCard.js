@@ -45,8 +45,6 @@ function SliderCard() {
           <div key={index} className="box  top slider_box">
             <div className="left">
               <img src={item.img} alt="banners" />
-              <div
-              className="light_dark"></div>
             </div>
           </div>
         ))}
