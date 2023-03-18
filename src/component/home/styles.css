@@ -34,9 +34,15 @@
   line-height: 20px;
   width: 50%;
 }
-.home .banner .banner_box .banner_btn_right {
-  margin-left: 30px;
+.home .banner .banner_btn {
+  width: 350px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
+/* .home .banner .banner_box .banner_btn_right {
+  margin-left: 30px;
+} */
 
 /*====== Contact Info ======*/
 .home .contact_info {
@@ -392,5 +398,23 @@
 @media screen and (max-width: 489px) {
   .home .banner {
     margin-top: -40px;
+  }
+}
+/*======= MEDIA QUERIES (SMALL DEVICES) =======*/
+@media screen and (max-width: 361px) {
+  .home .banner {
+    margin-top: -90px;
+  }
+  .home .banner .banner_btn {
+    flex-direction: column;
+    position: relative;
+    top: 50px;
+  }
+  .home .banner .banner_box p {
+    width: 100%;
+  }
+  .home .banner .banner_box .banner_btn_right {
+    position: relative;
+    top: 20px;
   }
 }
