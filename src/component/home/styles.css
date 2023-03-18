@@ -389,7 +389,7 @@
   }
 }
 /*======= MEDIA QUERIES (SMALL DEVICES) =======*/
-@media screen and (max-width: 402px) {
+@media screen and (max-width: 489px) {
   .home .banner {
     margin-top: -40px;
   }
