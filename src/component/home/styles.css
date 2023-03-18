@@ -3,10 +3,6 @@
   overflow: hidden;
 }
 .home .banner {
-  /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(../../asset/Hero/12.jpg);
-  background-position: center;
-  background-size: cover; */
   height: 100%;
   overflow: hidden;
   color: var(--color-white);
@@ -367,6 +363,7 @@
   .testimonial .sections {
     display: grid;
     grid-template-columns: 1fr;
+    margin-bottom: 60px;
   }
   .testimonial .section_2 {
     margin-top: 140px;
@@ -381,5 +378,11 @@
   }
   .blog_post .services_box_cont .blog_btn a {
     left: 30px;
+  }
+}
+/*======= MEDIA QUERIES (SMALL DEVICES) =======*/
+@media screen and (max-width: 600px) {
+  .home .banner {
+    margin-top: -20px;
   }
 }

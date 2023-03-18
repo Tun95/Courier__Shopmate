@@ -6,7 +6,7 @@ function ContactIfo() {
     <div className="contact_info">
       <div className="contact_info_box container">
         <div className="contact_info_cont d_grid">
-          <Fade cascade direction="up" damping={0.2}>
+          <Fade cascade direction="down" damping={0.2}>
             <div className="section_1 d_flex">
               <div className="icon">
                 <i className="fa-solid fa-phone-volume"></i>
