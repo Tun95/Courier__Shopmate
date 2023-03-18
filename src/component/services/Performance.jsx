@@ -1,4 +1,5 @@
 import React from "react";
+import { Fade } from "react-awesome-reveal";
 
 function Performance() {
   return (
@@ -8,20 +9,22 @@ function Performance() {
           <div className="sections p_flex1">
             <div className="section_2">
               <div className="content">
-                <h1>Why Choose Us As Provider</h1>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Deserunt consequatur sequi nulla ut vero modi et vitae qui
-                  aliquam quas!Lorem ipsum dolor sit amet, consectetur
-                  adipisicing elit. Deserunt consequatur sequi nulla ut vero
-                  modi et vitae qui aliquam quas!adipisicing elit. Deserunt
-                  consequatur sequi nulla ut vero modi et vitae qui aliquam
-                  quas! <br />
-                  <br />
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Deserunt consequatur sequi nulla ut vero modi et vitae qui
-                  aliquam quas!consequatur sequi nulla
-                </p>
+                <Fade cascade direction="down" damping={0.2}>
+                  <h1>Why Choose Us As Provider</h1>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Deserunt consequatur sequi nulla ut vero modi et vitae qui
+                    aliquam quas!Lorem ipsum dolor sit amet, consectetur
+                    adipisicing elit. Deserunt consequatur sequi nulla ut vero
+                    modi et vitae qui aliquam quas!adipisicing elit. Deserunt
+                    consequatur sequi nulla ut vero modi et vitae qui aliquam
+                    quas! <br />
+                    <br />
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Deserunt consequatur sequi nulla ut vero modi et vitae qui
+                    aliquam quas!consequatur sequi nulla
+                  </p>
+                </Fade>
               </div>
             </div>
             <div className="section_1">

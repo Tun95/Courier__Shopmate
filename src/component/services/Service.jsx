@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import img from "../../asset/About/10.jpg";
 import img1 from "../../asset/Services/6.jpg";
 import img2 from "../../asset/Services/9.jpg";
+import { Fade } from "react-awesome-reveal";
 
 function Service() {
   const data = [
@@ -39,17 +40,19 @@ function Service() {
                   <img src={img} alt="blog_images" />
                 </div>
                 <div className="content">
-                  <Link to="" className="title_link">
-                    {" "}
-                    <h1>{title}</h1>
-                  </Link>
-                  <p>{description}</p>
-                  <div className="blog_btn">
-                    <Link to="" className="btn btn-primary">
-                      Get a quote{" "}
-                      <i className="fa-sharp fa-solid fa-right-long"></i>
+                  <Fade cascade triggerOnce direction="down" damping={0.1}>
+                    <Link to="" className="title_link">
+                      {" "}
+                      <h1>{title}</h1>
                     </Link>
-                  </div>
+                    <p>{description}</p>
+                    <div className="blog_btn">
+                      <Link to="" className="btn btn-primary">
+                        Get a quote{" "}
+                        <i className="fa-sharp fa-solid fa-right-long"></i>
+                      </Link>
+                    </div>
+                  </Fade>
                 </div>
               </div>
             ))}

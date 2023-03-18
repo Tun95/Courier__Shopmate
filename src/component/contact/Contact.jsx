@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./styles.scss";
 import img from "../../asset/Contact/8.jpg";
+import { Fade } from "react-awesome-reveal";
 
 function Contact() {
   return (
@@ -11,14 +12,18 @@ function Contact() {
           <div className="sections ">
             <div className="section_1">
               <div className="header">
-                <h1>Send Us A Message</h1>
+                <Fade triggerOnce direction="down" delay={500}>
+                  <h1>Send Us A Message</h1>
+                </Fade>
               </div>
               <div className="content">
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Laborum, accusamus! Consequatur maiores corporis eaque
-                  repellendus provident.
-                </p>
+                <Fade triggerOnce direction="down" delay={500}>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Laborum, accusamus! Consequatur maiores corporis eaque
+                    repellendus provident.
+                  </p>
+                </Fade>
                 <form action="" className="input_boxes">
                   <div className="input_box">
                     <input

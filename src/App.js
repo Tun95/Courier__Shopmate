@@ -10,7 +10,6 @@ import TrackScreen from "./screen/track goods/TrackScreen";
 import ContactScreen from "./screen/contact/ContactScreen";
 import BlogScreen from "./screen/blog/BlogScreen";
 import BlogDetailsScreen from "./screen/blog details/BlogDetailsScreen";
-import SideBar from "./common/side bar/SideBar";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 

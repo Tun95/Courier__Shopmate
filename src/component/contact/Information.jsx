@@ -1,47 +1,52 @@
 import React from "react";
 import "./styles.scss";
+import { Fade } from "react-awesome-reveal";
 
 function Information() {
   return (
     <div className="infomation">
       <div className="infomation_box container ">
         <div className="infomation_content">
-          <div className="box_1">
-            <div className="icon">
-              <i className="fa-solid fa-magnifying-glass-location"></i>
+          <Fade cascade triggerOnce direction="up" damping={0.2}>
+            <div className="box_1">
+              <div className="icon">
+                <i className="fa-solid fa-magnifying-glass-location"></i>
+              </div>
+              <div className="content">
+                <h2>Our Locations</h2>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Quaerat nulla rerum dolorum, laboriosam inventore accusamus.
+                </p>
+              </div>
             </div>
-            <div className="content">
-              <h2>Our Locations</h2>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Quaerat nulla rerum dolorum, laboriosam inventore accusamus.
-              </p>
+            <div className="box_1">
+              <div className="icon">
+                <i className="fa-solid fa-envelope"></i>
+              </div>
+              <div className="content">
+                <h2>Our Locations</h2>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Quaerat nulla rerum dolorum, laboriosam inventore accusamus.
+                </p>
+              </div>
             </div>
-          </div>
-          <div className="box_1">
-            <div className="icon">
-              <i className="fa-solid fa-envelope"></i>
+          </Fade>
+          <Fade triggerOnce direction="right" delay={500}>
+            <div className="box_1">
+              <div className="icon">
+                <i className="fa-solid fa-mobile-screen-button"></i>
+              </div>
+              <div className="content">
+                <h2>Our Locations</h2>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Quaerat nulla rerum dolorum, laboriosam inventore accusamus.
+                </p>
+              </div>
             </div>
-            <div className="content">
-              <h2>Our Locations</h2>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Quaerat nulla rerum dolorum, laboriosam inventore accusamus.
-              </p>
-            </div>
-          </div>
-          <div className="box_1">
-            <div className="icon">
-              <i className="fa-solid fa-mobile-screen-button"></i>
-            </div>
-            <div className="content">
-              <h2>Our Locations</h2>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Quaerat nulla rerum dolorum, laboriosam inventore accusamus.
-              </p>
-            </div>
-          </div>
+          </Fade>
         </div>
       </div>
     </div>

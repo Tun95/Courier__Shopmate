@@ -2,7 +2,6 @@ import React from "react";
 import "./nav.css";
 import { Link } from "react-router-dom";
 import Logo from "../../asset/Logo/Website Logo/Logo.png";
-import { useState } from "react";
 import SideBar from "../side bar/SideBar";
 
 function Nav() {

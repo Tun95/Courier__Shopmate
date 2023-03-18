@@ -1,5 +1,6 @@
 import React from "react";
 import "./styles.css";
+import { Fade } from "react-awesome-reveal";
 
 function Performances() {
   return (
@@ -43,12 +44,14 @@ function Performances() {
             </div>
             <div className="section_2">
               <div className="content">
-                <h1>Our Year In Number</h1>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Deserunt consequatur sequi nulla ut vero modi et vitae qui
-                  aliquam quas!
-                </p>
+                <Fade cascade direction="down" damping={0.1}>
+                  <h1>Our Year In Number</h1>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Deserunt consequatur sequi nulla ut vero modi et vitae qui
+                    aliquam quas!
+                  </p>
+                </Fade>
               </div>
             </div>
           </div>
